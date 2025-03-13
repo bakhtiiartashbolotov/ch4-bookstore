@@ -2,13 +2,15 @@ version: "3.9"
 services:
   web:
     build: .
-    command: python /plm_prof_django/manage.py runserver 0.0.0.0:8000
+    command: python /code/manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/plm_prof_django
+      - .:/code
     ports:
       - 8000:8000
     depends_on:
       - db
+    environment:
+      - "DJANGO_SECRET_KEY=django-insecure-hv1(e0r@v4n4m6gqdz%dn(60o=dsy8&@0_lbs8p-v3u^bs4)xl"
   db:
     image: postgres:13
     volumes:
