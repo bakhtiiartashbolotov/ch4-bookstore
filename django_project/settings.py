@@ -172,3 +172,6 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_HOST_USER = "sendmails187@gmail.com"
 EMAIL_HOST_PASSWORD = "qhvxbndrhtorepjh"
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
